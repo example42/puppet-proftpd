@@ -49,6 +49,7 @@ class proftpd::params {
   }
 
   $config_file = $::operatingsystem ? {
+    /(?i:RedHat|CentOS)/ => '/etc/proftpd.conf',
     default => '/etc/proftpd/proftpd.conf',
   }
 
